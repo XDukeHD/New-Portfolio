@@ -1,8 +1,12 @@
 {
-  "name": "discord-oauth2-implementation",
+  "name": "my-portfolio",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": {
+    "name": "XDuke",
+    "email": "contato@xduke.tech"
+  },
   "scripts": {
     "start": "node ./dist/index.js",
     "start:dev": "nodemon ./src/index.ts",

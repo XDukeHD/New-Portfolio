@@ -21,9 +21,28 @@ async function main() {
       res.render("home", { currentYear });
     });
 
+    app.get("/home", (req, res) => {
+      const currentYear = new Date().getFullYear();
+      res.render("home", { currentYear });
+    });
+
+    app.get("/bio", (req, res) => {
+      const currentYear = new Date().getFullYear();
+      res.render("bio", { currentYear });
+    }); 
+
     // Adicionar outras rotas
     app.get("/mydiscord", function (req, res) {
       res.redirect("https://discordapp.com/users/816775306115285073");
+    });
+    app.get("/github", function (req, res) {
+      res.redirect("https://github.com/XDukeHD");
+    });
+    app.get("/instagram", function (req, res) {
+      res.redirect("https://www.instagram.com/tulio_zanella/");
+    });
+    app.get("/codepen", function (req, res) {
+      res.redirect("https://codepen.io/xdukehd");
     });
     app.get('/assets/css/:nome', (req, res) => {
       res.sendFile(path.join(__dirname, 'public', 'assets', 'css', req.params.nome));
